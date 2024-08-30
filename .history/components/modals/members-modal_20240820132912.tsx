@@ -1,0 +1,47 @@
+"use client"
+import React, { useEffect, useState } from 'react'
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+  } from "@/components/ui/dialog"
+
+import { useRouter } from 'next/navigation';
+import { useModal } from '@/hooks/use-modal-store';
+import { ServerWithMembersWithProfiles } from '@/type';
+
+
+
+const MembersModel = () => {
+    const router = useRouter();
+
+    const {isOpen, onClose, onOpen, type, data} = useModal();
+
+    const {server} = data as {server: ServerWithMembersWithProfiles};
+
+    const [isLoading, setIsLoading] = useState(false);
+
+    const isModalOpen = isOpen && type == "members";
+
+
+  return (
+    <Dialog open={isModalOpen} onOpenChange={onClose}>
+        <DialogContent className='bg-white text-black p-0 overflow-hidden'>
+            <DialogHeader className='pt-8 px-6'>
+                    <DialogTitle className='text-2xl text-center font-bold'>
+                           Manage Members
+                    </DialogTitle>
+                    <DialogDescription className='text-center text-zinc-500'>
+                        {server?.members?.length} Members
+                    </DialogDescription>
+            </DialogHeader>
+            <Sc
+        </DialogContent>
+
+    </Dialog>
+  )
+}
+
+export default MembersModel

@@ -1,0 +1,13 @@
+"use client";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+  } from "@/components/ui/tooltip"
+
+  interface ActionTooltipProps{
+    lable: string,
+    children: React.ReactNode,
+    side?:
+  }
