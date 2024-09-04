@@ -1,0 +1,3 @@
+async GET = (params:type) => {
+    
+}
