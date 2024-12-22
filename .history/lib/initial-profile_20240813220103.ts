@@ -1,1 +1,0 @@
-import { currentUser, red } from "@clerk/nextjs/server";

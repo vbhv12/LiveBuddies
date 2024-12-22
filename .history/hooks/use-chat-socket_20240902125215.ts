@@ -1,4 +1,0 @@
-type ChatSocketProps = {
-    addKey : string;
-    
-}

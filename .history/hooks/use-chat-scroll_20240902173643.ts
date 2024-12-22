@@ -1,3 +1,0 @@
-type ChatScrollProps = {
-    chatRef
-}
